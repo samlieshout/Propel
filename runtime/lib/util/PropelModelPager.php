@@ -37,7 +37,7 @@ class PropelModelPager implements IteratorAggregate, Countable
     public function __construct(ModelCriteria $query, $maxPerPage = 10)
     {
         $this->setQuery($query);
-        $this->setMaxPerPage($maxPerPage);
+        $this->setMaxPerPage(intval($maxPerPage));
     }
 
     public function setQuery(ModelCriteria $query)
